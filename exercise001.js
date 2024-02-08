@@ -12,14 +12,18 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Task 1 .then .catch
-promise
-	.then(result => console.log(`Yay! Promise resolved with response ${result}`))
-	.then(console.warn("This second .then completes before the first"))
-	.catch(error => console.log(`Boo. Promise rejected with response: ${error}`));
+// promise
+// 	.then(result => console.log(`Yay! Promise resolved with response ${result}`))
+// 	.catch(error => console.log(`Boo. Promise rejected with response: ${error}`));
 
 // Task 2 async, await - try{} catch{}
-// try{
- 
-// } catch {
+async function callPromise() {
+	try{
+		let result = await promise;
+		console.log(`Yay! Promise resolved with response ${result}`);
+	} catch(error) {
+		console.error(`Boo. Promise rejected with response: ${error}`);
+	};
+};
 
-// };
+callPromise();

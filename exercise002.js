@@ -9,7 +9,12 @@ const fetchData = async (apiEndPoint) => {
     console.log(json);
   } catch(error) {
     console.log(error);
-  }
-}
+  };
+};
 
 fetchData(jsonTypicode);
+
+// Extension - Fun Cat Fact!
+const catFactEndPoint = "https://cat-fact.herokuapp.com/facts/random";
+fetchData(catFactEndPoint);
+

@@ -17,13 +17,21 @@ const promise = new Promise((resolve, reject) => {
 // 	.catch(error => console.log(`Boo. Promise rejected with response: ${error}`));
 
 // Task 2 async, await - try{} catch{}
-const callPromise = async () => {
-	try{
-		const result = await promise;
-		console.log(`Yay! Promise resolved with response ${result}`);
-	} catch(error) {
-		console.error(`Boo. Promise rejected with response: ${error}`);
-	};
-};
+// const callPromise = async () => {
+// 	try{
+// 		const result = await promise;
+// 		console.log(`Yay! Promise resolved with response ${result}`);
+// 	} catch(error) {
+// 		console.error(`Boo. Promise rejected with response: ${error}`);
+// 	};
+// };
 
-callPromise();
+// callPromise();
+
+// Testing top level await promise
+try{
+	const result = await promise;
+	console.log(`Yay! Promise resolved with response ${result}`);
+} catch(error) {
+	console.error(`Boo. Promise rejected with response: ${error}`);
+};

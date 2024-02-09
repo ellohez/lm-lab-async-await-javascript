@@ -11,27 +11,27 @@ const promise = new Promise((resolve, reject) => {
 	}
 });
 
-// Task 1 .then .catch
-// promise
-// 	.then(result => console.log(`Yay! Promise resolved with response ${result}`))
-// 	.catch(error => console.log(`Boo. Promise rejected with response: ${error}`));
+/* 
+	Task 2 async, await - try{} catch{}
+ 	NOTE: Have kept both solutions available to show
+ 	the alternatives that I tested out. 
+*/ 
 
-// Task 2 async, await - try{} catch{}
-// const callPromise = async () => {
-// 	try{
-// 		const result = await promise;
-// 		console.log(`Yay! Promise resolved with response ${result}`);
-// 	} catch(error) {
-// 		console.error(`Boo. Promise rejected with response: ${error}`);
-// 	};
-// };
-
-// callPromise();
-
-// Testing top level await promise
-try{
-	const result = await promise;
-	console.log(`Yay! Promise resolved with response ${result}`);
-} catch(error) {
-	console.error(`Boo. Promise rejected with response: ${error}`);
+const callPromise = async () => {
+	try{
+		const result = await promise;
+		console.log(`Yay! Promise resolved with response ${result}`);
+	} catch(error) {
+		console.error(`Boo. Promise rejected with response: ${error}`);
+	};
 };
+
+callPromise();
+
+// Alternative - top level await promise
+// try{
+// 	const result = await promise;
+// 	console.log(`Yay! Promise resolved with response ${result}`);
+// } catch(error) {
+// 	console.error(`Boo. Promise rejected with response: ${error}`);
+// };

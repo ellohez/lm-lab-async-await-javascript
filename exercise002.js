@@ -2,6 +2,8 @@ import fetch from "node-fetch";
 
 const jsonTypicode = "https://jsonplaceholder.typicode.com/todos/1";
 
+// Refactored to use the modern async await instead of
+// .then() and .catch()
 const fetchData = async (apiEndPoint) => {
   try {
     const response = await fetch(apiEndPoint);
